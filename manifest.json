@@ -1,0 +1,39 @@
+{
+    "name": "OPSINT-Nuclei",
+    "description": "The OPSINT-Nuclei Chrome extension harnesses the power of Nuclei's Command-Line Interface (CLI) API to provide users with essential operational security (OPSEC) information directly within their web browser. Designed for cybersecurity professionals, researchers, and anyone concerned about their online privacy.",
+    "version": "2.61",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Search Email",
+        "default_icon": {
+            "16": "icons/logo_main.png",
+            "48": "icons/logo_main.png",
+            "128": "icons/logo_main.png"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "webRequest",
+        "cookies",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*.discord.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "icons": {
+        "16": "icons/logo_main.png",
+        "48": "icons/logo_main.png",
+        "128": "icons/logo_main.png"
+    }
+}

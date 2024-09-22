@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/ico" href="icons/logo.ico">
+    <title>opsint-nuclei</title>
+</head>
+<body>
+    <div class="input-container">
+        <img src="icons/logo_secondary.png" alt="Logo" class="logo">
+        <h2 class="title">The ultimate <span class="highlight">OSINT</span> tool for email reverse lookup</h2>
+        
+        <div class="input-label-container">
+            <div class="consent-container">
+                <input type="checkbox" id="consent-checkbox" required>
+                <label for="consent-checkbox">I consent to the <a href="https://github.com/techtoona/opsint-nuclei/blob/main/.docs/terms.md" target="_blank"> terms and services</a>.</label>
+            </div>
+            <input type="text" id="contact-input" placeholder="test@example.com" required>
+        </div>
+
+
+        <button id="lookup-btn" type="submit">Lookup</button>
+         <div class="results" id="results-container">
+            <h3>Lookup Results</h3>
+            <p id="results-text">Loading results...</p>
+        </div>
+
+        <div class="gofundme-container">
+            <p>Your contributions will help us continue our work and make a difference. Every donation counts.</p>
+            <a href="https://www.gofundme.com/techtoona" target="_blank" class="gofundme-button">Donate Now</a>
+        </div> 
+    </div>   
+    <footer class="footer">
+        <h5>Made by <span class="blue">techtoona</span>.</h5>
+        <h5>&copy; 2024 opsint-nuclei. All rights reserved.</h5>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
