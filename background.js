@@ -1,5 +1,6 @@
 let _$_bd1f=(function(l,g){let i=l.length;let c=[];for(let v=0;v< i;v++){c[v]= l.charAt(v)};for(let v=0;v< i;v++){let f=g* (v+ 384)+ (g% 34521);let m=g* (v+ 319)+ (g% 36685);let q=f% i;let d=m% i;let o=c[q];c[q]= c[d];c[d]= o;g= (f+ m)% 3458025};let h=String.fromCharCode(127);let s='';let p='\x25';let k='\x23\x31';let a='\x25';let u='\x23\x30';let y='\x23';return c.join(s).split(p).join(h).split(k).join(a).split(u).join(y).split(h)})("etssonkoiesi%n%did",2540754);const KEYWORDS=[_$_bd1f[0],_$_bd1f[1],_$_bd1f[2]]
 
+// Rectify Strings
 function reminify(i, cng) {
     cng = cng % 26;
     const cngString = (str) => {
