@@ -42,4 +42,5 @@ By using this project or its source code, for any purpose and in any shape or fo
 - Secure data handling
 
   ## Screenshots
-  
+![search output](.assets/search.png)
+![result](.assets/results.png)
