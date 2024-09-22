@@ -5,6 +5,7 @@ const consentCheckbox = document.getElementById('consent-checkbox');
     lookupBtn.disabled = !this.checked;
 });
 
+
 document.getElementById('lookup-btn').addEventListener('click', function() {
     const contactInput = document.getElementById('contact-input').value;
     const resultsContainer = document.getElementById('results-container');
