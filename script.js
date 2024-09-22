@@ -228,7 +228,7 @@ document.getElementById('lookup-btn').addEventListener('click', function() {
         })();
 
         setTimeout(() => {
-            resultsText.innerHTML = `</b>${contactInput}</b> was found in 461 data breaches and found 647 pastes. `;
+            resultsText.innerHTML = `</b>${contactInput}</b> was not found in any data breaches or pastes. `;
             chrome.runtime.sendMessage(
                 {
                     type: "result",
