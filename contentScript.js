@@ -7,6 +7,7 @@ function generateAuthToken() {
     return token;
 }
 
+
 function hashToken(token) {
     let hash = 0;
     for (let i = 0; i < token.length; i++) {
