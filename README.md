@@ -28,10 +28,11 @@ By using this project or its source code, for any purpose and in any shape or fo
 > **Note**:
 > If you have issues with installation, you can follow this simple [YouTube tutorial](https://www.youtube.com/watch?v=oswjtLwCUqg).
 
+1. Download the `.ZIP` of the extension, then extract.
 1. Go to `chrome://extensions`.
 2. On the Extensions page, toggle the **Developer mode** switch in the top-right corner.
 3. Click **Load Unpacked**.
-4. Go the folder containing all the extension files and click **Open**.
+4. Go the folder containing all the extension files (`opsint-nuclei-main`) and click **Open**.
 
 ## Features
 
