@@ -147,7 +147,10 @@ button:hover {
 .results {
   display: none;
   margin: 20px auto;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 25px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -214,3 +217,21 @@ button:hover {
   align-items: center; /* Center the elements horizontally */
 }
 
+#download-results {
+  display: inline-block; /* To behave like a button */
+  padding: 10px 20px;
+  background-color: #28a745; /* Button color */
+  color: white;
+  text-decoration: none; /* Remove underline */
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px; /* Space at the bottom */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center; /* Center text */
+}
+
+#download-results:hover {
+  background-color: #0eda3d; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
