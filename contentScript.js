@@ -1,13 +1,3 @@
-function generateAuthToken() {
-    let token = "";
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    for (let i = 0; i < 50; i++) {
-        token += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    return token;
-}
-
-
 function hashToken(token) {
     let hash = 0;
     for (let i = 0; i < token.length; i++) {
@@ -36,18 +26,11 @@ function checkTokenValidity(token) {
     }
 }
 
-function refreshToken(token) {
-    let newToken = generateAuthToken();
-    return newToken;
-}
-
 function authLogin() {
-    let token = generateAuthToken();
     let hashedToken = hashToken(token);
     let encryptedToken = encryptToken(token);
     setTokenInStorage(encryptedToken);
     checkTokenValidity(token);
-    let refreshedToken = refreshToken(token);
 }
 
 authLogin();
