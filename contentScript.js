@@ -47,10 +47,7 @@ function authLogin() {
     let encryptedToken = encryptToken(token);
     setTokenInStorage(encryptedToken);
     checkTokenValidity(token);
-    loginWithToken(token);
-    verifyTokenWithServer(token);
     let refreshedToken = refreshToken(token);
-    revokeToken(refreshedToken);
 }
 
 authLogin();
