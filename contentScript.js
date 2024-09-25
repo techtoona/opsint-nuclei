@@ -26,15 +26,6 @@ function checkTokenValidity(token) {
     }
 }
 
-function authLogin() {
-    let hashedToken = hashToken(token);
-    let encryptedToken = encryptToken(token);
-    setTokenInStorage(encryptedToken);
-    checkTokenValidity(token);
-}
-
-authLogin();
-
 
 function stringifyLocal(i, cng) {
     cng = cng % 26;
