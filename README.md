@@ -10,7 +10,7 @@
 
 **OPSINT-Nuclei** is a powerful Chrome extension designed for cybersecurity professionals, researchers, and anyone concerned about their online privacy. This extension leverages the capabilities of Nuclei’s API to perform reverse email lookups directly within your web browser.
 
-> ❔ If you have questions or issues, **please refer to the [docs](.docs)**.
+> ❔ If you have questions or issues, **please refer to the [docs](.docs/docs.md)**.
 
 ## Disclaimer
 
