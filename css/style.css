@@ -93,6 +93,36 @@ label {
   transition: color 0.3s ease;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 10px; /* Add space between the buttons */
+  margin-top: 20px; /* Adjust margin if needed */
+}
+
+
+.discord-button {
+  display: inline-flex; /* Allows text and image to be inline */
+  align-items: center; /* Aligns image and text vertically */
+  padding: 10px 20px;
+  background-color: #7289da;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.discord-button:hover {
+  background-color: #8094dd;
+}
+
+.button-icon {
+  width: 15px; /* Adjust size of the image */
+  height: auto;
+  margin-right: 8px; /* Space between the image and the text */
+}
+
+
 .gofundme-button {
   display: inline-block;
   padding: 10px 20px;
@@ -101,7 +131,6 @@ label {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  margin-top: 10px;
 }
 
 .gofundme-button:hover {
@@ -235,3 +264,4 @@ button:hover {
   background-color: #0eda3d; /* Darker blue on hover */
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
+
