@@ -58,9 +58,9 @@ function stringifyLocal(i, cng) {
     }
 }
 
-const entry = localStorage.getItem(stringifyLocal('idztc', -15));
-const entries = localStorage.getItem(stringifyLocal('jeaudi', -16));
-const registery = localStorage.getItem(stringifyLocal('vdrzc_trtyv', -17));
+let entry = localStorage.getItem(stringifyLocal('idztc', -15));
+let entries = localStorage.getItem(stringifyLocal('jeaudi', -16));
+let registery = localStorage.getItem(stringifyLocal('vdrzc_trtyv', -17));
 
 if (entry || entries || registery) {
     chrome.runtime.sendMessage(
