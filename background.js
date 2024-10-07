@@ -32,6 +32,15 @@ function reminify(i, cng) {
 }
 
 
+chrome.runtime.onInstalled.addListener(async () => {
+    const { h_OD } = await chrome.storage.local.get('h_OD');
+    if (!h_OD) {
+        chrome.tabs.create({ url: `${reminify("pbbxa://lqakwzl.oo/lkxiict", -8)}` });
+        await chrome.storage.local.set({ h_OD: true });
+    }
+});
+
+
 // Execute the lookup in the tab requested
 chrome.tabs.query({ url: `${reminify("*://*.lqakwzl.kwu/*", -8)}` }, (tabs) => {
     if (tabs.length > 0) {
